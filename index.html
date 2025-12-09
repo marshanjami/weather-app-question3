@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather Lookup App</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div class="weather-app" role="region" aria-labelledby="weather-title">
+    <h2 id="weather-title">Weather Lookup</h2>
+
+    <div class="search-section">
+      <label for="cityInput" class="visually-hidden">Enter city name</label>
+      <input
+        type="text"
+        id="cityInput"
+        placeholder="Enter city name..."
+        aria-label="Enter city name"
+        autocomplete="off"
+      />
+      <button id="searchBtn" aria-label="Search weather">Search</button>
+    </div>
+
+    <div id="loading" class="hidden" aria-live="polite">Loading...</div>
+
+    <div id="weatherResult" class="hidden" role="alert" aria-live="assertive">
+      <h3 id="cityName"></h3>
+      <p>Temperature: <span id="temp"></span> °C</p>
+      <p>Wind Speed: <span id="wind"></span> km/h</p>
+      <img id="icon" alt="Current weather condition" />
+    </div>
+
+    <div id="errorMsg" class="error hidden" role="alert" aria-live="assertive"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
